@@ -18,5 +18,9 @@ func SetupRouter() *gin.Engine {
 	r.POST("/members", handlers.AddMemberHandler)
 	r.GET("/members", handlers.ListMembersHandler)
 	//todo:Add Borrow/Return endpoints
+
+	r.POST("/borrow", handlers.BorrowBookHandler)
+	r.POST("/return", handlers.ReturnBookHandler)
+
 	return r
 }

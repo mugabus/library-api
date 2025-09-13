@@ -26,7 +26,7 @@ func AddMember(member models.Member) models.Member {
 }
 
 // Borrow book
-func borrowBook(bookID int) error {
+func BorrowBook(bookID int) error {
 	book, exists := Books[bookID]
 	if !exists {
 		return errors.New("book not found")
