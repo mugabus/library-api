@@ -12,13 +12,13 @@ var Members = make(map[int]models.Member)
 var NextBookID = 1
 var NextMemberID = 1
 
-func addBook(book models.Book) models.Book {
+func AddBook(book models.Book) models.Book {
 	book.BookID = NextBookID
 	Books[NextBookID] = book
 	NextBookID++
 	return book
 }
-func addMember(member models.Member) models.Member {
+func AddMember(member models.Member) models.Member {
 	member.MemberID = NextMemberID
 	Members[NextMemberID] = member
 	NextMemberID++
